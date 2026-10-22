@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.idea/
+.vscode/
+.DS_Store
+
+# Rendered demo output is regenerated locally (see examples/demo/README note
+# in the main README); keep the sample images, ignore rendered videos.
+examples/demo/output.mp4

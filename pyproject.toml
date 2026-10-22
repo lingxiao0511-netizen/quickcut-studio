@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quickcut-studio"
+version = "0.1.0"
+description = "Turn screenshots + one-line captions into vertical short-form videos (1080x1920) with a fixed three-zone template."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "lingdang" }]
+requires-python = ">=3.10"
+dependencies = [
+    "Pillow>=10.0",
+    "PyYAML>=6.0",
+]
+keywords = ["video", "short-form", "tiktok", "reels", "shorts", "ffmpeg", "pillow", "cli"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Video",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+quickcut = "quickcut.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/lingxiao0511-netizen/quickcut-studio"
+
+[tool.setuptools.packages.find]
+include = ["quickcut*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
