@@ -1,0 +1,17 @@
+# QuickCut Studio demo project.
+# Generate the sample images first:  python make_samples.py
+# Then render:                      quickcut build config.yaml
+title:
+  - "QuickCut Demo"
+  - "Screenshots in, video out"
+segments:
+  - image: shot1_post.png
+    caption: "Step 1: drop in a screenshot"
+    duration: 2.5
+  - image: shot2_chart.png
+    caption: "Step 2: add a one-line caption"
+    duration: 2.5
+  - image: shot3_quote.png
+    caption: "Step 3: render — title stays on, nothing is cropped"
+    duration: 2.5
+output: output.mp4
